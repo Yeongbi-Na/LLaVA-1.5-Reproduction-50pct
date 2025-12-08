@@ -790,7 +790,15 @@ def train(attn_implementation=None):
 
     parser = transformers.HfArgumentParser(
         (ModelArguments, DataArguments, TrainingArguments))
-    model_args, data_args, training_args = parser.parse_args_into_dataclasses()
+    #model_args, data_args, training_args = parser.parse_args_into_dataclasses()
+    # 수정 후: 사용되지 않은 인자들을 무시하고 반환받습니다. (튜플을 4개로 변경)
+    model_args, data_args, training_args, remaining_strings = \
+        parser.parse_args_into_dataclasses(return_remaining_strings=True)
+    
+    # 나머지 인자들을 출력 (선택 사항)
+    if remaining_strings:
+        print(f"⚠️ WARNING: Unused arguments ignored: {remaining_strings}")
+    
     local_rank = training_args.local_rank
     compute_dtype = (torch.float16 if training_args.fp16 else (torch.bfloat16 if training_args.bf16 else torch.float32))
 
@@ -839,6 +847,13 @@ def train(attn_implementation=None):
             torch_dtype=(torch.bfloat16 if training_args.bf16 else None),
             **bnb_model_from_pretrained_args
         )
+
+    # 코드 추가: Flash Attention 사용 전에 모델을 명시적으로 GPU로 이동하여 오류를 방지
+    if attn_implementation == "flash_attention_2":
+        model.to(training_args.device)  # 모델의 전체를 명시된 디바이스로 이동
+        print("✅ Model explicitly moved to GPU for Flash Attention 2 compatibility.")
+    # --- 코드 추가 종료 ---
+
     model.config.use_cache = False
 
     if model_args.freeze_backbone:

@@ -1,35 +1,20 @@
-# Python
-__pycache__
+# --- System & Logs ---
+__pycache__/
 *.pyc
-*.egg-info
-dist
-
-# Log
-*.log
-*.log.*
-*.json
-*.jsonl
-
-# Data
-!**/alpaca-data-conversation.json
-
-# Editor
-.idea
-*.swp
-
-# Other
-.DS_Store
-wandb
-output
-
-checkpoints
-ckpts*
-
 .ipynb_checkpoints
-*.ipynb
+wandb/
+*.log
 
-# DevContainer
-!.devcontainer/*
+# --- Large Files (절대 올리지 말 것) ---
+*.pth
+*.bin
+*.pt
+checkpoints/
+outputs/
+playground/data/
+images/
+dataset/
 
-# Demo
-serve_images/
+# --- Environment ---
+venv/
+.env
