@@ -44,7 +44,7 @@ Evaluation on MMBench Dev set. Images are decoded from base64 in the TSV file.
 ```bash
 #!/bin/bash
 # Path Configuration
-export MODEL_PATH="/nas/home/ongv1109/LLaVA1.5/checkpoints/llava-v1.5-7b-official"
+export MODEL_PATH=""
 export DATA_DIR="/nas/datahub/llava-v1.5-instruct/eval/mmbench"
 export OUTPUT_DIR="./playground/data/eval/mmbench/answers/official"
 export SPLIT="mmbench_dev_20230712" 
@@ -79,7 +79,7 @@ export GPU_ID=4
 export CUDA_VISIBLE_DEVICES=$GPU_ID
 
 # Path Configuration
-export MODEL_PATH="/nas/home/ongv1109/LLaVA1.5/checkpoints/llava-v1.5-7b-official"
+export MODEL_PATH=""
 export DATA_DIR="/nas/datahub/llava-v1.5-instruct/eval/scienceqa"
 export IMAGE_PATH="/nas/datahub/ScienceQA/test" 
 export QUESTION_FILE="$DATA_DIR/llava_test_CQM-A.json"
@@ -116,7 +116,7 @@ export GPU_ID=5
 export CUDA_VISIBLE_DEVICES=$GPU_ID
 
 # Path Configuration
-export MODEL_PATH="/nas/home/ongv1109/LLaVA1.5/checkpoints/llava-v1.5-7b-official"
+export MODEL_PATH=""
 export DATA_DIR="/nas/datahub/llava-v1.5-instruct/eval/pope"
 export IMAGE_DIR="/nas/datahub/llava-v1.5-instruct/coco/val2014/val2014"
 export ANSWERS_DIR="./playground/data/eval/pope/answers/official"
