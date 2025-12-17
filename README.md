@@ -21,7 +21,7 @@ This project reproduces the **LLaVA-1.5 7B** model to verify its "Data Efficienc
 
 * **Image Format Conversion:**
   All input images must be converted to **PNG** format before training. Please refer to:
-  - 🖼️ `ongv_convert_images.ipynb`
+  - 🖼️ `scripts/ongv_convert_images.ipynb`
 
 * **Data Verification:**
   To inspect the instruction data statistics and details, please refer to:
