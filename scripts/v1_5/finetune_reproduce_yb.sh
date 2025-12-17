@@ -2,7 +2,7 @@ deepspeed llava/train/train_mem.py \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path lmsys/vicuna-7b-v1.5 \
     --version v1 \
-    --data_path /nas/datahub/llava-v1.5-instruct/llava_v1_5_mix665k_50pct.json \
+    --data_path yours \
     --image_folder /nas/datahub/llava-v1.5-instruct \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --pretrain_mm_mlp_adapter ./checkpoints/llava-v1.5-7b-pretrain/mm_projector.bin \
@@ -13,7 +13,7 @@ deepspeed llava/train/train_mem.py \
     --image_aspect_ratio pad \
     --group_by_modality_length True \
     --bf16 True \
-    --output_dir  /nas/home/ongv1109/LLaVA1.5/checkpoints/llava-v1.5-7b-50pct-finetune \
+    --output_dir  yours \
     --num_train_epochs 1 \
     --per_device_train_batch_size 2 \
     --per_device_eval_batch_size 4 \
