@@ -26,7 +26,12 @@ This project reproduces the **LLaVA-1.5 7B** model to verify its "Data Efficienc
 * **Data Verification:**
   To inspect the instruction data statistics and details, please refer to:
   - 🔍 `check_data.ipynb`
-   
+  
+### 🛠️ Finetuning Scripts
+* **Fine-tuning:**
+  The script used for fine-tuning is available at:
+  - 🚀 `scripts/v1_5/finetune_reproduce_yb.sh`
+  
 ## 📊 Conclusion & Analysis
 
 ### 1. Conclusion
