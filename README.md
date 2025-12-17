@@ -13,7 +13,20 @@ This project reproduces the **LLaVA-1.5 7B** model to verify its "Data Efficienc
 * **Hardware:** 4x NVIDIA A100 (80GB)
 
 ---
+### 🛠️ Data Preparation Scripts
 
+* **Data Sampling (50% Subset):**
+  To replicate our 50% random sampling process, please refer to:
+  - 📜 `scripts/ongv_sampling_mixture_50pct.ipynb`
+
+* **Image Format Conversion:**
+  All input images must be converted to **PNG** format before training. Please refer to:
+  - 🖼️ `ongv_convert_images.ipynb`
+
+* **Data Verification:**
+  To inspect the instruction data statistics and details, please refer to:
+  - 🔍 `check_data.ipynb`
+   
 ## 📊 Conclusion & Analysis
 
 ### 1. Conclusion
