@@ -31,7 +31,9 @@ This project reproduces the **LLaVA-1.5 7B** model to verify its "Data Efficienc
 * **Fine-tuning:**
   The script used for fine-tuning is available at:
   - 🚀 `scripts/v1_5/finetune_reproduce_yb.sh`
-  
+
+**Model weights:** [ongv11/llava-v1.5-7b-50pct-finetune](https://huggingface.co/ongv11/llava-v1.5-7b-50pct-finetune) (Hugging Face)
+
 ## 📊 Conclusion & Analysis
 
 ### 1. Conclusion
